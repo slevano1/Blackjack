@@ -18,11 +18,10 @@
         }
         
         #score {}
-        
-        #btndeal,
+        /* #btndeal,
         #myactions {
             display: none;
-        }
+        } */
         /*button styling*/
         
         .btn {
@@ -192,6 +191,8 @@
                 var output = document.getElementById("output");
                 var dealerHolder = document.getElementById("dealerHolder");
                 var playerHolder = document.getElementById("playerHolder");
+                var pValue = document.getElementById("pValue");
+                var dValue = document.getElementById("dValue");
 
                 for (s in suits) {
                     var suit = suits[s][0].toUpperCase();
@@ -260,7 +261,7 @@
                         '<br></div> </div>';
                 }
 
-                function cardaAction(a) {
+                function cardAction(a) {
                     console.log(a);
                     switch (a) {
                         case 'hit':
@@ -275,10 +276,37 @@
                             playend(); //playout and calculate
                             break;
                         default:
-                            playerHolderconsole.log('done');
+                            console.log('done');
                             playend(); //playout and calculate
-
                     }
+                }
+
+                function playucard() {
+                    playerCard.push(cards[cardCount]);
+                    playerHolder.innerHTML += cardOutput(cardCount, (playerCard.length - 1));
+                    cardCount++;
+                    var rValu = checktotal(playerCard);
+                    pValue.innerHTML = rValu;
+                    if (rValu > 21) {
+                        message.innerHTML = "You Lose!";
+                        playend();
+                    }
+                }
+
+                function checktotal(arr) {
+                    var rValue = 0;
+                    var aceAdjust = false;
+                    for (var i in arr) {
+                        if (arr[i].cardnum == 'A' && !aceAdjust) {
+                            aceAdjust = true;
+                            rValue = rValue + 10;
+                        }
+                        rValue = rValue + arr[i].cardvalue;
+                    }
+                    if (aceAdjust && rValue > 21) {
+                        rValue = rValue - 10;
+                    }
+                    return rValue;
                 }
 
                 function shuffleDeck(array) {
