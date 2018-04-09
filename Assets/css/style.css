@@ -32,11 +32,18 @@ div#start {
 
 /*add 8-bit font*/
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-image: url(../Images/green.jpg);
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    width: 100%;
+    height: 100%;
 }
 
 #maxbet {
@@ -124,7 +131,7 @@ body {
     border-radius: 10px;
     position: absolute;
     border: 1px solid black;
-    padding: 3px;
+    padding: 4px;
 }
 
 element.style {
@@ -135,7 +142,7 @@ element.style {
     height: 160px;
     width: 120px;
     padding: 3px;
-    border: 1px solid black;
+    border: 3px solid black;
     background-color: white;
     border-radius: 10px;
     position: absolute;
@@ -205,6 +212,7 @@ element.style {
 #playerHolder {
     height: 180px;
     width: 500px;
+    margin-top: 10px;
 }
 
 #message {
@@ -234,6 +242,7 @@ element.style {
 #maxbet {
     background-color: red;
     border-radius: 15px;
+    margin-left: 10px;
 }
 
 #btnstart {
