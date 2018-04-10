@@ -23,12 +23,12 @@ h1 {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-    text-shadow: 2px 3px #222222;
+    text-shadow: 2px 2px #222222;
 }
 
 h4 {
     text-align: center;
-    text-shadow: 2px 3px #222222;
+    text-shadow: 2px 2px #222222;
 }
 
 
@@ -51,7 +51,7 @@ body {
     background-image: url(../Images/green.jpg);
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
-    text-shadow: 2px 3px #222222;
+    text-shadow: 2px 2px #222222;
     width: 100%;
     height: 100%;
 }
