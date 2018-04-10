@@ -233,11 +233,14 @@ element.style {
 
 #message {
     height: 90px;
-    padding: 10px;
-    margin-top: 10px;
+    color: #ffe919;
     margin-bottom: 7px;
     font-size: 30px;
     text-align: center;
+}
+
+div#message {
+    color: #ffe919 !important;
 }
 
 #btndeal {
