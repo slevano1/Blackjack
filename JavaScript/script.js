@@ -9,13 +9,13 @@ var endplay = false;
 var suits = ["spades", "hearts", "clubs", "diams"];
 var numb = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 // var numb = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"];
-var message = document.getElementById("message");
-var output = document.getElementById("output");
-var dealerHolder = document.getElementById("dealerHolder");
-var playerHolder = document.getElementById("playerHolder");
-var pValue = document.getElementById("pValue");
-var dValue = document.getElementById("dValue");
-var dollarValue = document.getElementById("dollars");
+var message = document.getElementById('message');
+var output = document.getElementById('output');
+var dealerHolder = document.getElementById('dealerHolder');
+var playerHolder = document.getElementById('playerHolder');
+var pValue = document.getElementById('pValue');
+var dValue = document.getElementById('dValue');
+var dollarValue = document.getElementById('dollars');
 
 //keeps the player bet within budget
 document.getElementById('mybet').onchange = function() {
@@ -51,7 +51,7 @@ function Start() {
     shuffleDeck(cards);
     dealNew();
     document.getElementById('start').style.display = 'none';
-    document.getElementById('dollars').innerHTML = mydollars;
+    dollarValue.innerHTML = mydollars;
 }
 
 function dealNew() {
@@ -83,23 +83,24 @@ function redeal() {
 
 function deal() {
     // card count reshuffle
-
-
-
     for (x = 0; x < 2; x++) {
         dealerCard.push(cards[cardCount]);
         dealerHolder.innerHTML += cardOutput(cardCount, x);
         if (x == 0) {
             dealerHolder.innerHTML += '<div id="cover" style="left:100px;"></div>';
         }
-        redeal()
+        redeal();
+
         playerCard.push(cards[cardCount]);
         playerHolder.innerHTML += cardOutput(cardCount, x);
-        redeal()
+        redeal();
     }
-
-    pValue.innerHTML = checktotal(playerCard);
-
+    //end play if blackjack
+    var playervalue = checktotal(playerCard);
+    if (playervalue == 21 && playerCard.length == 2) {
+        playend();
+    }
+    pValue.innerHTML = playervalue;
 }
 
 function cardOutput(n, x) {
@@ -149,7 +150,7 @@ function cardAction(a) {
 function playucard() {
     playerCard.push(cards[cardCount]);
     playerHolder.innerHTML += cardOutput(cardCount, (playerCard.length - 1));
-    redeal()
+    redeal();
     var rValu = checktotal(playerCard);
     pValue.innerHTML = rValu;
     if (rValu > 21) {
@@ -173,7 +174,7 @@ function playend() {
     while (dealervalue < 17) {
         dealerCard.push(cards[cardCount]);
         dealerHolder.innerHTML += cardOutput(cardCount, (dealerCard.length - 1));
-        redeal()
+        redeal();
         dealervalue = checktotal(dealerCard);
         dValue.innerHTML = dealervalue;
     }
@@ -181,8 +182,7 @@ function playend() {
     //Determines the winner
     var playervalue = checktotal(playerCard);
     if (playervalue == 21 && playerCard.length == 2) {
-        message.innerHTML = "Player Blackjack -- ";
-        payoutJack = 1.5;
+        playend();
     }
 
     var betvalue = parseInt(document.getElementById('mybet').value) * payoutJack;
