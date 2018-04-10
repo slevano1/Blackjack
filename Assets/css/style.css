@@ -59,6 +59,7 @@ body {
 #mybet {
     font-size: 30px;
     font-weight: 100;
+    border-radius: 10px;
     text-align: center;
     font-family: "PressStart2P.ttf", Arial, sans-serif;
 }
@@ -301,7 +302,7 @@ div#message {
     color: #ffffff;
     font-size: 25px;
     border-radius: 15px;
-    margin-top: 15px;
+    margin-top: 4px;
 }
 
 
