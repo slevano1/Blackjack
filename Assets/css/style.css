@@ -59,6 +59,7 @@ body {
 #mybet {
     font-size: 30px;
     font-weight: 100;
+    text-align: center;
     font-family: "PressStart2P.ttf", Arial, sans-serif;
 }
 
@@ -66,12 +67,14 @@ body {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    border: solid 1px #ffffff;
 }
 
 #btnstart {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    border: solid 1px #ffffff;
 }
 
 #btnstart:hover {
@@ -83,6 +86,7 @@ body {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    border: solid 1px #ffffff;
 }
 
 #btnhold:hover {
@@ -94,6 +98,7 @@ body {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    border: solid 1px #ffffff;
 }
 
 #btnhold:hover {
@@ -105,9 +110,16 @@ body {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
     text-shadow: 2px 3px #222222;
+    border: solid 1px #ffffff;
 }
 
 #btndouble:hover {
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#btndeal:hover {
     color: #ffffff;
     cursor: pointer;
     opacity: 0.5;
@@ -126,7 +138,7 @@ body {
     display: none;
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
-    text-shadow: 2px 3px #222222
+    text-shadow: 2px 3px #222222;
 }
 
 .btn {
@@ -246,6 +258,8 @@ div#message {
 #btndeal {
     background-color: #12bdfd;
     font-size: 25px;
+    border: solid 1px #ffffff;
+    border-radius: 15px;
 }
 
 #btnhold {
@@ -258,6 +272,12 @@ div#message {
     border-radius: 15px;
 }
 
+#btnhit:hover {
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 #btndouble {
     background-color: blue;
     border-radius: 15px;
@@ -268,6 +288,12 @@ div#message {
     border-radius: 15px;
     margin-left: 10px;
     font-size: 15px;
+}
+
+#maxbet:hover {
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 #btnstart {
