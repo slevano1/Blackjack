@@ -98,6 +98,7 @@ body {
 #btnhit {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
+    border-width: thick;
     text-shadow: 2px 3px #222222;
     border: solid 1px #ffffff;
 }
@@ -110,6 +111,7 @@ body {
 #btndouble {
     font-family: "PressStart2P.ttf", Arial, sans-serif;
     color: #ffffff;
+    border-width: thick;
     text-shadow: 2px 3px #222222;
     border: solid 1px #ffffff;
 }
@@ -266,26 +268,31 @@ div#message {
 #btnhold {
     background-color: green;
     border-radius: 15px;
+    border-width: thick;
 }
 
 #btnhit {
     background-color: red;
     border-radius: 15px;
+    border-width: thick;
 }
 
 #btnhit:hover {
     color: #ffffff;
     cursor: pointer;
     opacity: 0.5;
+    border-width: thick;
 }
 
 #btndouble {
     background-color: blue;
     border-radius: 15px;
+    border-width: thick;
 }
 
 #maxbet {
     background-color: red;
+    border-width: thick;
     border-radius: 15px;
     margin-left: 10px;
     font-size: 15px;
@@ -300,6 +307,7 @@ div#message {
 #btnstart {
     background-color: #12bdfd;
     color: #ffffff;
+    border-width: thick;
     font-size: 25px;
     border-radius: 15px;
     margin-top: 4px;
