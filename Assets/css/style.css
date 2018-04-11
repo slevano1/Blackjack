@@ -261,6 +261,7 @@ div#message {
 #btndeal {
     background-color: #12bdfd;
     font-size: 25px;
+    border-width: thick !important;
     border: solid 1px #ffffff;
     border-radius: 15px;
 }
