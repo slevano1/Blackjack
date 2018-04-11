@@ -7,13 +7,15 @@
 
 body {
     padding-top: 60px;
+    margin: auto;
 }
 
-@media (max-width: 980px) {
+
+/* @media (max-width: 980px) {
     body {
         padding-top: 0;
     }
-}
+} */
 
 
 /*style the font*/
