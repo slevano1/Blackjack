@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body id="cardgame">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -76,8 +76,9 @@
                 <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn">Hit</button>
                 <button id="btndouble" type="button" onclick="cardAction('double')" class="btn">Double</button>
             </div>
-            <div>
+            <div class="myactions">
                 <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+                <button id="btnreset" type="button" onclick="location.reload()" class="btn">Reset</button>
             </div>
 
         </div>
